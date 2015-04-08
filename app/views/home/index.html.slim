@@ -1,0 +1,19 @@
+.row
+	.col-md-1
+	.col-md-9
+		= form_tag(controller: "post", action: "create", method: "post") do
+			= text_area_tag "value",nil,rows:3, class: "form-control"
+			br
+			button type="submit" class="btn btn-default"
+				| Post
+		br
+		.list-group
+			- for item in @posts
+				a class="list-group-item" href="#"
+					.row
+						.col-md-1
+							.thumbnail style="border:none;hover:none;"
+								img src="#{item[:img]}"	style="height:30px;width:60px;"
+						.col-md-10
+							= item[:title]			
+	.col-md-2

@@ -1,0 +1,22 @@
+.navbar.navbar-default.navbar-fixed-top.navbar-first 
+	ul class="nav navbar-nav" 
+		- for cat in Common.instance.category do
+			li 
+				= link_to cat.value, post_link(cat.value), class: "cat-title"
+				end
+.navbar.navbar-default.navbar-static-top.navbar-second
+	.navbar-header
+		= link_to image_tag("logo.png", :width => 32, :height => 32), "/", class: "navbar-brand"
+
+	ul class="nav navbar-nav" 
+		- for top in Common.instance.topics do
+			li
+				= link_to top.value, post_link(top.value)
+				end
+	ul class="nav navbar-nav navbar-right" 
+		li
+			a href="#"
+				| SIGNIN
+		li
+			a href="#"
+				| SIGNUP

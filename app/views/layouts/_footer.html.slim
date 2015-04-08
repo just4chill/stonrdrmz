@@ -1,0 +1,30 @@
+
+.row
+  .col-md-4
+  .col-md-4.footer-box
+    .row 
+      .col-md-6
+        footer class="footer"
+          nav
+            h4 style="text-align:center;"
+              | about
+            ul
+              li
+                = link_to "Blog", contact_path
+              li
+                = link_to "About", contact_path
+              li
+                = link_to "Advertise", contact_path    
+      .col-md-6
+        footer class="footer"
+          nav
+            h4 style="text-align:center;"
+              | help
+            ul
+              li
+                = link_to "FAQ", about_path
+              li
+                = link_to "Wiki", contact_path
+              li
+                = link_to "Privacy", contact_path
+  .col-md-4
